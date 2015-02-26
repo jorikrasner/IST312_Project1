@@ -1,5 +1,7 @@
 package mw_jk_project_01;
 
+import java.util.Arrays;
+
 public class Applicants extends User {
 	// Attributes
 		private String phone;
@@ -7,7 +9,7 @@ public class Applicants extends User {
 		private String city;
 		private String state;
 		private String zip;
-		private Resume listOfResumes[] = new Resume[0];
+		private Resume[] listOfResumes = new Resume[0];
 
 		/**
 		 * @param firstname
@@ -120,12 +122,13 @@ public class Applicants extends User {
 		public void addResume(Resume resume){
 			Resume[] temp = new Resume[listOfResumes.length+1];
 			System.out.println(listOfResumes.length + 1);
-			for (int i=0; i < listOfResumes.length; ++i){
+			
+			for (int i=0; i < listOfResumes.length; i++){
 				temp[i] = listOfResumes[i];
-				temp[temp.length-1] = resume;
+				
 				
 			}
-			
+			temp[temp.length-1] = resume;
 			listOfResumes = temp;
 		
 			
@@ -139,7 +142,8 @@ public class Applicants extends User {
 					+ phone 
 					+ address
 					+ city  + state  + zip
-					 +listOfResumes[0].getName();
+					+ Arrays.toString(listOfResumes);
+				//	 +listOfResumes[0].getName();
 		}
 		
 }
