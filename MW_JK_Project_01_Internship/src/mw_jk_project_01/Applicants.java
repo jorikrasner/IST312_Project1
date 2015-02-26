@@ -119,11 +119,13 @@ public class Applicants extends User {
 		
 		public void addResume(Resume resume){
 			Resume[] temp = new Resume[listOfResumes.length+1];
-			for (int i=0; i < listOfResumes.length; i++){
+			System.out.println(listOfResumes.length + 1);
+			for (int i=0; i < listOfResumes.length; ++i){
 				temp[i] = listOfResumes[i];
 				temp[temp.length-1] = resume;
 				
 			}
+			
 			listOfResumes = temp;
 		
 			
@@ -136,7 +138,8 @@ public class Applicants extends User {
 			return super.toString() 
 					+ phone 
 					+ address
-					+ city + "," + state  + zip;
+					+ city  + state  + zip
+					 +listOfResumes[0].getName();
 		}
 		
 }

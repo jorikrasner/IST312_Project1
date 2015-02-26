@@ -75,7 +75,7 @@ public class Resume {
 	public String toString() {
 		return "Resume \n\tname: " + name
 				+ "\n\tlistOfResumeItems: "
-				+ Arrays.toString(listOfResumeItems);
+				+ listOfResumeItems;
 	}
 	
 	

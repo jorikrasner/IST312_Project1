@@ -45,7 +45,17 @@ public class InternshipDemo {
 		marcus_security.addResumeItem(mw_sk);
 		marcus_security.addResumeItem(mw_pr);
 		
-		System.out.println(marcus_security);
+		marcus_programming.addResumeItem(mw_ed1);
+		marcus_programming.addResumeItem(mw_ex);
+		marcus_programming.addResumeItem(mw_sk);
+		marcus_programming.addResumeItem(mw_pr);
+		
+		marcus.addResume(marcus_programming);
+		marcus.addResume(marcus_security);
+		marcus.addResume(marcus_security);
+		
+		
+		System.out.println(marcus);
 	}
 
 }
