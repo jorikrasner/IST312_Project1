@@ -1,6 +1,13 @@
+/**
+ * 
+ */
 package mw_jk_project_01;
 
-public class user {
+/**
+ * @author firefly48
+ *
+ */
+public class User {
 	//Attributes
 	private String firstname;
 	private String lastname;
@@ -12,14 +19,14 @@ public class user {
 	 * @param email
 	 * @param password
 	 */
-	public user(String firstname, String lastname, String email, String password) {
+	public User(String firstname, String lastname, String email, String password) {
 		this.firstname = firstname;
 		this.lastname = lastname;
 		this.email = email;
 		this.password = password;
 	}
 	
-	public user(user object2){
+	public User(User object2){
 		this.firstname = object2.firstname;
 		this.lastname = object2.lastname;
 		this.email = object2.email;
@@ -85,3 +92,4 @@ public class user {
 	
 	
 }
+
