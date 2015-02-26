@@ -1,6 +1,6 @@
 package mw_jk_project_01;
 
-public class Education extends Resume {
+public class Education extends ResumeItems {
 	private String institutionName;
 	private String institutionCountry;
 	private String yearCompleted;

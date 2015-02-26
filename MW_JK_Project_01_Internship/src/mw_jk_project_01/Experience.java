@@ -1,12 +1,10 @@
 package mw_jk_project_01;
 
-import java.util.Calendar;
-
-public class Experience extends Resume {
+public class Experience extends ResumeItems {
 	private String currentPosition;
 	private String company;
-	private Calendar startdate;
-	private Calendar enddate;
+	private String startdate;
+	private String enddate;
 	private String jobDescription;
 	/**
 	 * @param currentPosition
@@ -16,7 +14,7 @@ public class Experience extends Resume {
 	 * @param jobDescription
 	 */
 	public Experience(String currentPosition, String company,
-			Calendar startdate, Calendar enddate, String jobDescription) {
+			String startdate, String enddate, String jobDescription) {
 		super();
 		this.currentPosition = currentPosition;
 		this.company = company;
@@ -72,7 +70,7 @@ public class Experience extends Resume {
 	/**
 	 * @return the startdate
 	 */
-	public Calendar getStartdate() {
+	public String getStartdate() {
 		return startdate;
 	}
 
@@ -80,7 +78,7 @@ public class Experience extends Resume {
 	/**
 	 * @param startdate the startdate to set
 	 */
-	public void setStartdate(Calendar startdate) {
+	public void setStartdate(String startdate) {
 		this.startdate = startdate;
 	}
 
@@ -88,7 +86,7 @@ public class Experience extends Resume {
 	/**
 	 * @return the enddate
 	 */
-	public Calendar getEnddate() {
+	public String getEnddate() {
 		return enddate;
 	}
 
@@ -96,7 +94,7 @@ public class Experience extends Resume {
 	/**
 	 * @param enddate the enddate to set
 	 */
-	public void setEnddate(Calendar enddate) {
+	public void setEnddate(String enddate) {
 		this.enddate = enddate;
 	}
 

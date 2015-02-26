@@ -1,13 +1,32 @@
 package mw_jk_project_01;
 
-public class ProjectActivity extends Resume{
+public class ProjectActivity extends ResumeItems{
 	//ATTRIBUTES
 	
 	private String title;
-	private String category;
+	private String location;
 	private String dateCompleted;
 	
 	
+	
+	/**
+	 * @param title
+	 * @param location
+	 * @param dateCompleted
+	 */
+	public ProjectActivity(String title, String location, String dateCompleted) {
+		super();
+		this.title = title;
+		this.location = location;
+		this.dateCompleted = dateCompleted;
+	}
+	
+	public ProjectActivity(ProjectActivity object2) {
+		super();
+		this.title = object2.title;
+		this.location = object2.location;
+		this.dateCompleted = object2.dateCompleted;
+	}
 	//
 	/**
 	 * @return the title
@@ -22,16 +41,16 @@ public class ProjectActivity extends Resume{
 		this.title = title;
 	}
 	/**
-	 * @return the category
+	 * @return the location
 	 */
-	public String getCategory() {
-		return category;
+	public String getlocation() {
+		return location;
 	}
 	/**
-	 * @param category the category to set
+	 * @param location the location to set
 	 */
-	public void setCategory(String category) {
-		this.category = category;
+	public void setlocation(String location) {
+		this.location = location;
 	}
 	/**
 	 * @return the dateCompleted

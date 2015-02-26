@@ -2,7 +2,7 @@ package mw_jk_project_01;
 
 
 
-public class SkillsTraining extends Resume {
+public class SkillsTraining extends ResumeItems {
 	//ATTRIBUTES
 	private String title;
 	private String category;
@@ -18,6 +18,7 @@ public class SkillsTraining extends Resume {
 		super();
 		this.title = title;
 		this.category = category;
+		this.dateCompleted = "";
 	}
 
 	public SkillsTraining(String title, String category, String dateCompleted) {
@@ -84,9 +85,9 @@ public class SkillsTraining extends Resume {
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()
 	 */
-	@Override
+	//@Override
 	public String toString() {
-		if(dateCompleted.equals(""))
+		if(dateCompleted.isEmpty())
 		{
 			return "SkillsTraining \n\ttitle: " + title
 				+ "\n\tcategory: " + category;
@@ -99,7 +100,7 @@ public class SkillsTraining extends Resume {
 					+ "\n";
 		}
 			
-		
+		//return "test";
 				
 	}
 
