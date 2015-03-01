@@ -4,7 +4,7 @@ public class Education extends ResumeItems {
 	private String institutionName;
 	private String institutionCountry;
 	private String yearCompleted;
-	private String typeOfDegree;
+	private int typeOfDegree;
 	private String major;
 	private String specialization;
 	/**
@@ -16,7 +16,7 @@ public class Education extends ResumeItems {
 	 * @param specialization
 	 */
 	public Education(String institutionName, String institutionCountry,
-			String yearCompleted, String typeOfDegree, String major,
+			String yearCompleted, int typeOfDegree, String major,
 			String specialization) {
 		super();
 		this.institutionName = institutionName;
@@ -91,19 +91,66 @@ public class Education extends ResumeItems {
 	/**
 	 * @return the typeOfDegree
 	 */
-	public String getTypeOfDegree() {
+	public int getTypeOfDegree() {
 		return typeOfDegree;
 	}
+	
 
 
 	/**
 	 * @param typeOfDegree the typeOfDegree to set
 	 */
-	public void setTypeOfDegree(String typeOfDegree) {
+	public void setTypeOfDegree(int typeOfDegree) {
 		this.typeOfDegree = typeOfDegree;
 	}
 
-
+	public static String getTypeOfDegreeString(int typeOfDegree){
+		if (typeOfDegree == 1)
+		{
+			return "Associate";
+		}
+		else if (typeOfDegree == 2)
+		{
+			return "Bachelor";
+		}
+		else if (typeOfDegree == 3)
+		{
+			return  "Masters";
+		}
+		else if (typeOfDegree == 4)
+		{
+			return "Doctorate";
+		}
+		else
+		{
+		return "No Degree";
+		}
+		
+	}
+	
+	public String getTypeOfDegreeString(){
+		if (typeOfDegree == 1)
+		{
+			return "Associate";
+		}
+		else if (typeOfDegree == 2)
+		{
+			return "Bachelor";
+		}
+		else if (typeOfDegree == 3)
+		{
+			return  "Masters";
+		}
+		else if (typeOfDegree == 4)
+		{
+			return "Doctorate";
+		}
+		else
+		{
+		return "No Degree";
+		}
+		
+	}
 	/**
 	 * @return the major
 	 */

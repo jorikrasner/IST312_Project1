@@ -3,6 +3,8 @@
  */
 package mw_jk_project_01;
 
+import java.util.Calendar;
+
 /**
  * @author firefly48
  *
@@ -24,8 +26,8 @@ public class InternshipDemo {
 		Resume jori_networking = new Resume("jori_networking");
 		Resume jori_programming = new Resume("jori_programming");		
 		
-		ResumeItems mw_ed1 = new Education("SIUC", "USA", "2015", "Bachelors", "IST", "Security");
-		ResumeItems jk_ed1 = new Education("SIUC", "USA", "2016", "Bachelors", "IST", "Security");
+		ResumeItems mw_ed1 = new Education("SIUC", "USA", "2015", 2, "IST", "Security");
+		ResumeItems jk_ed1 = new Education("SIUC", "USA", "2016", 2, "IST", "Security");
 		
 		ResumeItems mw_ex = new Experience("UGA", "SIUC", "08/15/2013" , "08/15/2015", "Technician");
 		ResumeItems jk_ex = new Experience("Student Worker", "SIUC", "08/15/2013", "08/15/2015", "Technician");
@@ -53,7 +55,9 @@ public class InternshipDemo {
 		marcus.addResume(marcus_programming);
 		marcus.addResume(marcus_security);
 		marcus.addResume(marcus_security);
-		
+		Calendar test = Calendar.getInstance();
+		System.out.println(test);
+		System.out.println(marcus_security.totalYearsofExperience());
 		
 		System.out.println(marcus);
 	}
