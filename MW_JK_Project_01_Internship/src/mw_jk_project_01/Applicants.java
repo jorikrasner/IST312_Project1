@@ -145,5 +145,11 @@ public class Applicants extends User {
 					+ Arrays.toString(listOfResumes);
 				//	 +listOfResumes[0].getName();
 		}
+		/**
+		 * @return the listOfResumes
+		 */
+		public Resume[] getListOfResumes() {
+			return listOfResumes;
+		}
 		
 }

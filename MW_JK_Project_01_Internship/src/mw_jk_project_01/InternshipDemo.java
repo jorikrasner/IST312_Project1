@@ -55,11 +55,11 @@ public class InternshipDemo {
 		marcus.addResume(marcus_programming);
 		marcus.addResume(marcus_security);
 		marcus.addResume(marcus_security);
-		Calendar test = Calendar.getInstance();
-		System.out.println(test);
-		System.out.println(marcus_security.totalYearsofExperience());
 		
-		System.out.println(marcus);
+		
+		//System.out.println(marcus_security.totalYearsofExperience());
+		
+		System.out.println(marcus.get);
 	}
 
 }

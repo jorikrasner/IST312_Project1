@@ -1,7 +1,8 @@
 package mw_jk_project_01;
 
-import java.util.Arrays;
+
 import java.util.Calendar;
+import java.util.GregorianCalendar;
 
 public class Resume {
 	private String name;
@@ -45,6 +46,8 @@ public class Resume {
 	}
 
 	public int totalYearsofExperience(){
+		GregorianCalendar tempStart = new GregorianCalendar();
+		GregorianCalendar tempEnd = new GregorianCalendar();
 		double totalYearsOfExperience = 0;
 		for (int i = 0; i < listOfResumeItems.length; i++){
 			
@@ -61,10 +64,11 @@ public class Resume {
 				int monthInt = Integer.parseInt(month);
 				String date = aStartDate[1];
 				int dateInt = Integer.parseInt(date);
-				G
-				Calendar start = Calendar.getInstance();
-				start.set(yearInt, monthInt, dateInt);
-
+				
+				
+				tempStart.set(yearInt, monthInt, dateInt);
+				
+				
 				String endDate = ((Experience)current).getStartdate();
 				String[] aEndDate = endDate.split("/"); 
 				year = aEndDate[2];
@@ -73,10 +77,10 @@ public class Resume {
 				monthInt = Integer.parseInt(month);
 				date = aEndDate[1];
 				dateInt = Integer.parseInt(date);
-				Calendar end = Calendar.getInstance();
-				end.set(yearInt, monthInt, dateInt);
 				
-				long differenceInMilliSec = end.getTimeInMillis() - start.getTimeInMillis();
+				tempEnd.set(yearInt, monthInt, dateInt);
+				
+				long differenceInMilliSec = tempEnd.getTimeInMillis() - tempStart.getTimeInMillis();
 				double yearOfExperience =  (differenceInMilliSec/1000/3600/24/365.25);
 				
 
@@ -143,7 +147,8 @@ public class Resume {
 	public String toString() {
 		return "Resume \n\tname: " + name
 				+ "\n\tlistOfResumeItems: "
-				+ listOfResumeItems;
+				+ listOfResumeItems
+				+totalYearsofExperience();
 	}
 
 
