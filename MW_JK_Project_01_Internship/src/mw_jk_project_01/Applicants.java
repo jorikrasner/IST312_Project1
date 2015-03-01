@@ -9,6 +9,8 @@ public class Applicants extends User {
 		private String city;
 		private String state;
 		private String zip;
+		private int countofApplicaitons;
+		private int totalofApplication;
 		private Resume[] listOfResumes = new Resume[0];
 
 		/**
@@ -133,6 +135,19 @@ public class Applicants extends User {
 		
 			
 		}
+
+		public int totalofApplications(){
+			
+		}
+		
+		public int countofApplication(){
+			
+		}
+		
+		public void addApplication(){
+			
+		}
+		
 		/* (non-Javadoc)
 		 * @see java.lang.Object#toString()
 		 */
